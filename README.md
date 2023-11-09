@@ -2,19 +2,19 @@
 <center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=MuzoxStudios&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
 [![Version][version-github-shield]](version-url)
-[![Forks][forks-github-shield]](https://github.com/vishal889/MuzoxMusic/network/members)
-[![Stargazers][stars-github-shield]](https://github.com/vishal889/MuzoxMusic/stargazers)
-[![Issues][issues-github-shield]](https://github.com/vishal889/MuzoxMusic/issues)
-[![MIT License][license-github-shield]](https://github.com/vishal889/MuzoxMusic/blob/master/LICENSE)
+[![Forks][forks-github-shield]](https://github.com/vishalonlyy/Muzox-Clone/network/members)
+[![Stargazers][stars-github-shield]](https://github.com/vishalonlyy/Muzox-Clone/stargazers)
+[![Issues][issues-github-shield]](https://github.com/vishalonlyy/Muzox-Clone/issues)
+[![MIT License][license-github-shield]](https://github.com/vishalonlyy/Muzox-Clone/blob/master/LICENSE)
 [![Discord Support](https://discordapp.com/api/guilds/936226552256036926/widget.png?style=shield)](SupportServer)
 
 
 [chat-discord=shield]: https://img.shields.io/discord/936226552256036926?style=for-the-badge
-[version-github-shield]: https://img.shields.io/github/package-json/v/vishal889/MuzoxMusic?style=for-the-badge
-[forks-github-shield]: https://img.shields.io/github/forks/vishal889/MuzoxMusic?style=for-the-badge
-[stars-github-shield]: https://img.shields.io/github/stars/vishal889/MuzoxMusic?style=for-the-badge
-[issues-github-shield]: https://img.shields.io/github/issues/vishal889/MuzoxMusic?style=for-the-badge
-[license-github-shield]: https://img.shields.io/github/license/vishal889/MuzoxMusic?style=for-the-badge
+[version-github-shield]: https://img.shields.io/github/package-json/v/vishalonlyy/Muzox-Clone?style=for-the-badge
+[forks-github-shield]: https://img.shields.io/github/forks/vishalonlyy/Muzox-Clone?style=for-the-badge
+[stars-github-shield]: https://img.shields.io/github/stars/vishalonlyy/Muzox-Clone?style=for-the-badge
+[issues-github-shield]: https://img.shields.io/github/issues/vishalonlyy/Muzox-Clone?style=for-the-badge
+[license-github-shield]: https://img.shields.io/github/license/vishalonlyy/Muzox-Clone?style=for-the-badge
 
 [SupportServer]: https://discord.gg/EdKH2YsrW7
 
@@ -62,11 +62,10 @@ npm install
 5. Fill in the details required 
 ```js
 
-MongoDb_UsserName=" " # MongoDb Username
-MongoDb_Password=" " # Mongodb Password
-MongoDb_Url="xxxxxxxxxxxxxxx" # Mongodb Connection string
 
 Token="xxxxxxxxxx" # paste your Discord bot token
+PostgresqlDb="" # Postgresql database url
+TopGGApiKey="" # Top.gg api key
 status="online" # online,dnd,idle,offline
 Dprefix=" " # Prefix for your discord bot
 SearchEngine="ytsearch" # soundcloud : scsearch , ytMusic : ytmsearch , yt : ytsearch

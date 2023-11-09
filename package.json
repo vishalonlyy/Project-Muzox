@@ -1,0 +1,44 @@
+{
+  "name": "muzox",
+  "version": "3.1.0",
+  "description": "Muzox discord bot v2 typescript support ",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --project tsconfig.json",
+    "start": "node .",
+    "restart": "nodemon -w Src -e ts --exec \"npm run build && nodemon dist/index.js\"",
+    "dev": "rimraf dist && nodemon -w Src -e ts --exec \"npm run build && nodemon --enable-source-maps dist/index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vishal",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "nodemon": "^2.0.21",
+    "prisma": "^5.5.2",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.5.2",
+    "@top-gg/sdk": "^3.1.5",
+    "canvas": "^2.11.2",
+    "chalk": "^5.2.0",
+    "colors": "^1.4.0",
+    "crypto": "^1.0.1",
+    "discord-hybrid-sharding": "github:meister03/discord-hybrid-sharding",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "Logger": "^0.0.0",
+    "mongoose": "^7.0.0",
+    "node-superfetch": "^0.3.3",
+    "os-utils": "^0.0.14",
+    "pretty-ms": "^8.0.0",
+    "shoukaku": "github:Deivu/Shoukaku",
+    "typescript": "^5.0.4",
+    "ws": "^8.13.0"
+  }
+}

@@ -1,0 +1,4 @@
+/node_modules
+
+./Src/config.ts
+/dist

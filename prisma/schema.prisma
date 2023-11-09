@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("PostgresqlDb")
+}
+
+/// We could not retrieve columns for the underlying table. Either it has none or you are missing rights to see them. Please check your privileges.
+// model Demo {
+// }
+model PrefixData {
+  id      String  @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  guildId String  @unique
+  prefix  String?
+}
+
+model GuildData {
+  id              String        @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  guildId         String        @unique
+  NpButtons       Boolean       @default(true)
+  autoplay        Boolean       @default(false)
+  AnnounceChannel String?          @default("0")
+  SearchEngine    String?       @default("ytsearch")
+  Premium         GuildPremium?
+}
+
+model GuildPremium {
+  id                       String     @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  Premium                  Boolean    @default(false)
+  PremiumSince             String?    @default("0/00/0000")
+  PremiumExpires           String?    @default("0/00/0000")
+  PremiumGuildTier         String?    @default("Free")
+  PremiumSubscriptionCount Int?       @default(0)
+  guildId                  String     @unique
+  guild                    GuildData? @relation(fields: [guildId], references: [guildId])
+}
+
+model TwentyFourBySevenData {
+  id      String  @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  guildId String  @unique
+  channel String?
+  message String?
+  status  Boolean @default(false)
+}
+
+model PremiumUser {
+  id                       String    @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  userId                   String    @unique
+  Premium                  Boolean   @default(false)
+  PremiumSince             DateTime?
+  PremiumExpires           DateTime?
+  PremiumType              String?   @default("None")
+  PremiumSubscriptionCount Int?      @default(0)
+}
+
+model User {
+  id        String     @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  userId    String     @unique
+  playlists Playlist[]
+  Limit     Int        @default(10)
+  Badges    String[]
+}
+
+model Noprefix {
+  id     String  @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  userId String  @unique
+  active Boolean @default(false)
+}
+
+model Playlist {
+  id       String   @id @default(dbgenerated("gen_random_uuid()")) @map("_id") @db.Uuid
+  userId   String  @unique
+  user     User?    @relation(fields: [userId], references: [userId])
+  name     String   
+  songs    String[]
+  Url      String   @unique
+  Like     Int      @default(0)
+  Dislikes Int      @default(0)
+}

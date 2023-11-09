@@ -1,0 +1,88 @@
+lavalink:
+  plugins:
+  - dependency: com.github.TopiSenpai.LavaSrc:lavasrc-plugin:3.2.4
+    repository: https://maven.topi.wtf/releases
+  server:
+    bufferDurationMs: 400
+    filters:
+      channelMix: true
+      distortion: true
+      equalizer: true
+      karaoke: true
+      lowPass: true
+      rotation: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      volume: true
+    frameBufferDurationMs: 5000
+    gc-warnings: true
+    opusEncodingQuality: 10
+    password: youshallnotpass
+    playerUpdateInterval: 5
+    resamplingQuality: LOW
+    soundcloudSearchEnabled: true
+    sources:
+      bandcamp: true
+      http: true
+      local: false
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      youtube: true
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    youtubeSearchEnabled: true
+logging:
+  file:
+    path: null
+  level:
+    lavalink: INFO
+    root: INFO
+  logback:
+    rollingpolicy:
+      max-file-size: 1GB
+      max-history: 30
+  request:
+    enabled: true
+    includeClientInfo: true
+    includeHeaders: false
+    includePayload: true
+    includeQueryString: true
+    maxPayloadLength: 10000
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+plugins:
+  lavasrc:
+    applemusic:
+      albumLoadLimit: 6
+      countryCode: US
+      mediaAPIToken: '...'
+      playlistLoadLimit: 6
+    deezer:
+      masterDecryptionKey: your master decryption key
+    providers:
+    - ytsearch:"%ISRC%"
+    - ytsearch:%QUERY%
+    sources:
+      applemusic: false
+      deezer: true
+      spotify: true
+      yandexmusic: true
+    spotify:
+      albumLoadLimit: 6
+      clientId: d674fbebdb484746b9a23fa64b5e924a
+      clientSecret: 64520355184244fe878c99666007b8f3
+      countryCode: US
+      playlistLoadLimit: 6
+    yandexmusic:
+      accessToken: your access token
+sentry:
+  dsn: ""
+  environment: ""
+server:
+  address: 0.0.0.0
+  port: 4051

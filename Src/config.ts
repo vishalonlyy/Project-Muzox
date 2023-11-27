@@ -74,7 +74,8 @@ const config = (): Config => {
   if(config.TopGGApiKey === '' || null){
     Logger.log(": Top.gg Api Key Invalid ?? Not Provided [Critical]", "[Warn]")
   }
-  // if(config.token === 'MTE3MDc4MDQ5OTE4NzMzOTMxNA.G0mXFu.2cja8cifRGIarj5CRNMFBwFnQiIfJ_D0t8VQ3A'){
+  //Test System
+  // if(config.token === ''){
   //   console.log('Trying New node Values')
   //   config.logs = false;
   //   config.clientId = '1023825986455867455';

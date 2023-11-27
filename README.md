@@ -1,5 +1,5 @@
 
-<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=MuzoxStudios&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
+<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=MuzoxStudios&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center> 
 
 [![Version][version-github-shield]](version-url)
 [![Forks][forks-github-shield]](https://github.com/vishalonlyy/Muzox-Clone/network/members)
